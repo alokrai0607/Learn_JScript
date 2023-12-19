@@ -12,3 +12,15 @@ let c = 3.14;
 console.log(c+" is double datatype");
 
 // and many more ...
+
+
+// Booleans Data type
+let x = false;
+let y = true;
+
+console.log(x);
+console.log(typeof(x));
+console.log(y);
+console.log(typeof(y));
+
+
