@@ -1,0 +1,73 @@
+<!-- 1. Introduction
+2. What is Diffrence between DELETE and Truncate In SQL 
+3. What is Media Query
+4. What is the Way for decleare varables in class
+5. Diffrence between Div & Span 
+6. Check Pellindrome useing JavaScript (Not with java or any other languages)
+7. Reverse The Loop useing Javasipt (Not with JAVA)
+8. Make one form Useing HLML , CSS , JavaScript (Submit Buttun should be working Properly) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        gap: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .grid-item {
+        border: 1px solid #000;
+        padding: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="inputForm">
+      <label for="input1">Integer 1:</label>
+      <input type="Number" id="input1" name="input1" /><br /><br />
+
+      <label for="input2">Integer 2:</label>
+      <input type="Number" id="input2" name="input2" /><br /><br />
+
+      <label for="input3">Integer 3:</label>
+      <input type="Number" id="input3" name="input3" /><br /><br />
+
+      <label for="input4">Integer 4:</label>
+      <input type="Number" id="input4" name="input4" /><br /><br />
+
+      <label for="input5">Number 5:</label>
+      <input type="text" id="input5" name="input5" /><br /><br />
+
+      <button type="button" onclick="convertToGrid()">Convert</button>
+    </form>
+
+    <div id="outGrid" class="grid-container"></div>
+
+    <script>
+      function convertToGrid() {
+        const valuesArray = [];
+        for (let i = 1; i <= 5; i++) {
+          const inputField = document.getElementById("input" + i);
+          valuesArray.push(inputField.value.trim());
+        }
+        const outGrid = document.getElementById("outGrid");
+
+        outGrid.innerHTML = "";
+
+        valuesArray.forEach((value) => {
+          const gridItem = document.createElement("div");
+          gridItem.classList.add("grid-item");
+          gridItem.textContent = value;
+          outGrid.appendChild(gridItem);
+        });
+      }
+    </script>
+  </body>
+</html>
