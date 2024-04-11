@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #2c3e50; /* Set your desired background color */
+}
+
+.animation-container {
+  text-align: center;
+}
+
+#newYearText {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  color: #ecf0f1; /* Text color */
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  background-color: #3498db; /* Background color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+@keyframes textAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-text {
+  animation: textAnimation 2s infinite;
+}
